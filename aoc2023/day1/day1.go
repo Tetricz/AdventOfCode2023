@@ -191,7 +191,7 @@ leftLoop:
 	return lNum, rNum
 }
 
-func SolveDay1() int {
+func SolveDay1() {
 	// Read input file  day1.txt
 	file, err := os.Open("day1/day1.txt")
 	if err != nil {
@@ -210,11 +210,9 @@ func SolveDay1() int {
 		// log.Println("Num indices:", lNum, rNum, line)
 		accumulatedSum += ((lNum * 10) + rNum)
 	}
-	log.Println("Accumulated sum:", accumulatedSum)
+	log.Println("Day 1 Accumulated sum:", accumulatedSum)
 
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	return 0
 }
